@@ -1,0 +1,86 @@
+.form-container {
+    min-height: 100vh;
+    background-color: #f1f3f5;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form-card {
+    background: #fff;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    max-width: 650px;
+}
+
+.form-card h2 {
+    margin-bottom: 25px;
+    color: #212529;
+    border-bottom: 2px solid #f1f3f5;
+    padding-bottom: 12px;
+    font-size: 22px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #495057;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #f65e59;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(246, 94, 89, 0.15);
+}
+
+.btn-save {
+    width: 100%;
+    padding: 14px;
+    background-color: #f65e59;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.btn-save:hover {
+    background-color: #237032;
+}
+
+.btn-back {
+    display: block;
+    text-align: center;
+    color: #868e96;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 20px;
+    transition: color 0.2s;
+}
+
+.btn-back:hover {
+    color: #f65e59;
+}
