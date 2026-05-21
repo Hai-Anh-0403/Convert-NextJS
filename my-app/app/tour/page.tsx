@@ -22,7 +22,7 @@ export default function TourListPage(props: IProps) {
         try {
 
             const res = await fetch(
-                "http://localhost:5000/api/tours"
+                "http://localhost:5001/api/tours"
             );
 
             const data = await res.json();
@@ -52,7 +52,7 @@ export default function TourListPage(props: IProps) {
         try {
 
             const res = await fetch(
-                `http://localhost:5000/api/tours/${id}`,
+                `http://localhost:5001/api/tours/${id}`,
                 {
                     method: "DELETE",
                 }

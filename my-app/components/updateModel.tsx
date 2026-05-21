@@ -38,7 +38,7 @@ function UpdateModel(props: IProps) {
         if (!name || !location || !price || !days || !description) {
             return;
         }
-        const res = await fetch(`http://localhost:5000/api/tours/${id}`, {
+        const res = await fetch(`http://localhost:5001/api/tours/${id}`, {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json,text/plain,*/*',

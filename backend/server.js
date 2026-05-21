@@ -1,10 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5501;
 
 app.use(cors());
 app.use(express.json());
@@ -94,7 +95,9 @@ app.put('/api/tours/:id', async (req, res) => {
         res.status(500).json({ message: "Lỗi Server khi cập nhật tour" });
     }
 });
-
+app.get('/api/hello', (req, res) => {
+    res.json({ message: "API hoạt động hoàn hảo!" });
+});
 app.listen(PORT, () => {
     console.log(`Server Backend đang chạy mượt mà tại: http://localhost:${PORT}`);
 });
