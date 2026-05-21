@@ -18,6 +18,7 @@ const tourSchema = new mongoose.Schema({
     location: { type: String, required: true },
     price: { type: Number, required: true },
     days: { type: Number, default: 1 },
+    description: { type: String, default: "" },
     image: { type: String, default: "1747622.jpg" }
 }, { timestamps: true });
 

@@ -76,7 +76,7 @@ export default function HomePage() {
 
         <div className={styles["navigation-links"]}>
           <Link href="/tour/create" className={styles["nav-action-btn"]}>+ Thêm tour du lịch</Link>
-          <Link href="/tour" className={styles["nav-action-btn"]}>Xem Danh Sách Tour</Link>
+          <Link href="/tour" className={styles["nav-action-btn"]}>Danh Sách Tour</Link>
         </div>
 
         {/* BANNER SLIDER */}

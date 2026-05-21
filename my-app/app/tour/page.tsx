@@ -3,10 +3,18 @@
 import Link from "next/link";
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
+import UpdateModel from "@/components/updateModel";
 
-export default function TourListPage() {
+
+interface IProps {
+    tours: Tour[]
+}
+export default function TourListPage(props: IProps) {
+
 
     const [tours, setTours] = useState([]);
+    const [showModelUpdate, setShowModelUpdate] = useState<boolean>(false);
+    const [tour, setTour] = useState<Tour | null>(null)
 
     // lấy dữ liệu
     const fetchTours = async () => {
@@ -158,6 +166,12 @@ export default function TourListPage() {
                                         ? ` (${tour.days} ngày)`
                                         : ""}
                                 </p>
+                                <p className={styles["tour-location"]}>
+                                    {tour.description}
+                                    {tour.decription
+                                        ? ` (${tour.description} ) Khôn biết uy tín không`
+                                        : ""}
+                                </p>
 
                                 <p className={styles["tour-price"]}>
                                     {Number(tour.price).toLocaleString("vi-VN")} đ
@@ -166,6 +180,10 @@ export default function TourListPage() {
                                 <div className={styles["tour-actions"]}>
 
                                     <button
+                                        onClick={() => {
+                                            setTour(tour);
+                                            setShowModelUpdate(true)
+                                        }}
                                         className={`${styles.btn} ${styles["btn-edit"]}`}
                                     >
                                         Sửa
@@ -189,7 +207,13 @@ export default function TourListPage() {
                 </div>
 
             </main>
-
+            <UpdateModel
+                showModelUpdate={showModelUpdate}
+                setShowModelUpdate={setShowModelUpdate}
+                tour={tour}
+                setTour={setTour}
+                fetchTours={fetchTours}
+            />
         </div>
     );
 }

@@ -1,0 +1,56 @@
+.modalHeader {
+    background: #fff5f5;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.modalTitle {
+    color: #f44336;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.formLabel {
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 6px;
+}
+
+.input {
+    border-radius: 10px;
+    padding: 10px 14px;
+    border: 1px solid #dee2e6;
+    transition: all 0.2s ease;
+}
+
+.input:focus {
+    border-color: #f44336;
+    box-shadow: 0 0 0 0.2rem rgba(244, 67, 54, 0.2);
+}
+
+.footer {
+    border-top: 1px solid #f1f3f5;
+}
+
+.closeBtn {
+    border-radius: 10px;
+    padding: 8px 18px;
+    font-weight: 600;
+}
+
+.saveBtn {
+    background-color: #f44336 !important;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 8px 18px !important;
+    font-weight: 600 !important;
+    transition: all 0.25s ease;
+}
+
+.saveBtn:hover {
+    background-color: #d9362b !important;
+    transform: translateY(-1px);
+}
+
+.saveBtn:active {
+    transform: scale(0.98);
+}
